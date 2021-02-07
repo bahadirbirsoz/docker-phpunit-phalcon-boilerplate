@@ -68,11 +68,11 @@ $di->setShared('db', function () {
 
     $class = 'Phalcon\Db\Adapter\Pdo\\' . $config->database->adapter;
     $params = [
-        'host'     => $config->database->host,
-        'username' => $config->database->username,
-        'password' => $config->database->password,
-        'dbname'   => $config->database->dbname,
-        'charset'  => $config->database->charset
+        'host'     => getenv('MYSQL_HOST'),
+        'username' => getenv('MYSQL_USER'),
+        'password' => getenv('MYSQL_PASSWORD'),
+        'dbname'   => getenv('MYSQL_DATABASE'),
+        'charset'  => getenv('DATABASE_CHARSET')
     ];
 
     if ($config->database->adapter == 'Postgresql') {
