@@ -2,7 +2,15 @@
 
 ## Get Started
 
-You need to create your .env file. example.env is provided. Just rename and change. 
+
+* You need to create your .env file. example.env is provided. Just rename and change. 
+
+* nginx is configured to listen port 80. You can change it from docker-compose.yml
+
+To run
+```
+docker-compose up --build
+```
 
 ###Complete Phalcon Development Environment
 
@@ -16,3 +24,4 @@ FROM php:7.4-fpm
 - Xdebug
 - Nginx
 - Mysql
+
